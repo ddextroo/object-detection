@@ -12,7 +12,6 @@ app = Flask(__name__)
 api_key = os.getenv("API_KEY")
 model = os.getenv("MODEL")
 print(api_key)
-print(model)
 rf = Roboflow(api_key=api_key)
 project = rf.workspace().project(model)
 model = project.version(3).model
